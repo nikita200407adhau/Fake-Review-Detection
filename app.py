@@ -27,7 +27,7 @@ SPAM_KEYWORDS = {
 
 
 st.set_page_config(
-    page_title="AI Fake Review Detection System",
+    page_title="Fake Review Detection System",
     page_icon="🔍",
     layout="centered",
     initial_sidebar_state="expanded",
@@ -195,7 +195,7 @@ def render_sidebar() -> None:
     row_count, columns = load_dataset_preview()
 
     with st.sidebar:
-        st.markdown("## AI Review Lab")
+        st.markdown("## Review Lab")
         st.markdown(
             "A portfolio-ready NLP application that combines machine learning "
             "with rule-based review quality checks."
@@ -220,15 +220,7 @@ def render_sidebar() -> None:
             st.markdown(f"Columns: `{', '.join(columns[:6])}`")
 
         st.markdown("### Developer Info")
-        st.markdown(
-            """
-            <div class="developer-panel">
-                <div class="developer-name">Nikita Adhau</div>
-                <a href="mailto:nikitaadhau27@gmail.com">nikitaadhau27@gmail.com</a>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
+        st.markdown("Name: Nikita Adhau"n/)
 
 
 def main() -> None:
@@ -239,38 +231,17 @@ def main() -> None:
     st.markdown(
         """
         <section class="hero">
-            <div class="hero-topline">
-                <div class="hero-badge">NLP + Machine Learning</div>
-                <div class="hero-meta">
-                    <span>Portfolio Project</span>
-                    <span>Developer: Nikita Adhau</span>
-                </div>
-            </div>
-            <h1>AI Fake Review Detection System</h1>
+            <div class="hero-badge">NLP + Machine Learning</div>
+            <h1>Fake Review Detection System</h1>
             <p>
                 Analyze product reviews with a hybrid engine that blends
                 TF-IDF, Logistic Regression, sentiment signals, and spam rules.
             </p>
-            <div class="hero-stats">
-                <div>
-                    <strong>TF-IDF</strong>
-                    <span>Feature Engine</span>
-                </div>
-                <div>
-                    <strong>Logistic Regression</strong>
-                    <span>Classifier</span>
-                </div>
-                <div>
-                    <strong>Real-time</strong>
-                    <span>Review Check</span>
-                </div>
-            </div>
         </section>
         """,
         unsafe_allow_html=True,
     )
 
-    st.markdown('<div class="review-panel">', unsafe_allow_html=True)
     review_text = st.text_area(
         "Enter product review",
         placeholder="Example: The product quality is good, delivery was on time, and the packaging felt reliable.",
@@ -279,7 +250,6 @@ def main() -> None:
     )
 
     analyze = st.button("Analyze Review", use_container_width=True, type="primary")
-    st.markdown("</div>", unsafe_allow_html=True)
 
     if analyze:
         if not review_text or not review_text.strip():
@@ -347,7 +317,7 @@ def main() -> None:
         """
         <footer>
             <span>AI Fake Review Detection System</span>
-            <span>Developer: Nikita Adhau · nikitaadhau27@gmail.com</span>
+            <span>Built with Streamlit, NLP, and Machine Learning</span>
         </footer>
         """,
         unsafe_allow_html=True,
