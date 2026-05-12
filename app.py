@@ -324,7 +324,7 @@ def main() -> None:
     st.markdown(
         """
         <footer>
-            <span>AI Fake Review Detection System</span>
+            <span>Fake Review Detection System</span>
             <span>Built with Streamlit, NLP, and Machine Learning</span>
         </footer>
         """,
