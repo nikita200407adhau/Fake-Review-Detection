@@ -220,7 +220,15 @@ def render_sidebar() -> None:
             st.markdown(f"Columns: `{', '.join(columns[:6])}`")
 
         st.markdown("### Developer Info")
-        st.markdown("Name: Nikita Adhau"n/)
+        st.markdown(
+            """
+            <div class="developer-panel">
+                <div class="developer-name">Nikita Adhau</div>
+                <a href="mailto:nikitaadhau27@gmail.com">nikitaadhau27@gmail.com</a>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 
 def main() -> None:
